@@ -1,0 +1,28 @@
+body {
+    background-image: url('bg.gif');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.island {
+    background-color: rgba(41, 40, 40, 0.5); /* Szary kolor z przezroczystością */
+    padding: 20px; /* Dodatkowe wypełnienie dla wyspy */
+    border-radius: 10px; /* Zaokrąglenie krawędzi wyspy */
+    text-align: center;
+}
+
+.island a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.island img {
+    width: 50px; /* Dostosuj rozmiar ikon według potrzeb */
+    height: auto;
+}

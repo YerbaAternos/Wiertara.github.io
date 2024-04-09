@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⭐ X_Wiertara ⭐</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes blinking {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="island">
+        <h1 class="title">X_Wiertara</h1> <!-- Animowany tytuł -->
+        <a href="link_do_Spotify"><img src="spotify.png" alt="Spotify"></a>
+        <a href="https://discord.com/users/1144683889940516945"><img src="discord.png" alt="Discord"></a>
+        <a href="link_do_Discord"><img src="github.png" alt="Github"></a>
+        <div class="spotify-frame">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5wK62T444x5tbMLeV0VGrH?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="activity">
+            <div class="discord-card">
+                <img src="https://cdn.discordapp.com/avatars/1171079356156756050/50ab5b6208cc91a69f0356aa9f5a802b.webp?size=128" style="margin-left: 1rem;"></img>
+                <span style="font-size: large;">Wiertara__1</span>
+                <img src="hype.png" id="badge" alt="HypeSquad Balance"></img>
+                <img src="dev.png" id="badge" alt="Active Developer"></img>
+                <img src="org.png" id="badge" alt="Originally known as bigdicktloczek"></img>
+            </div>
+        </div>
+    </div>
+    <script>
+        const titleElement = document.querySelector('.title');
+
+        function loop() {
+            setTimeout(() => {
+                titleElement.textContent = titleElement.textContent.slice(0, -1);
+                if (titleElement.textContent === '') {
+                    titleElement.textContent = 'X_Wiertara';
+                }
+                loop();
+            }, 1000);
+        }
+
+        loop();
+
+        // Animacja tytułu strony
+        const titleText = document.title;
+        let index = 0;
+
+        function animateTitle() {
+            index = (index + 1) % (titleText.length + 1);
+            document.title = titleText.substring(0, index);
+            setTimeout(animateTitle, 500);
+        }
+
+        animateTitle();
+    </script>
+</body>
+</html>
